@@ -1,0 +1,115 @@
+.products {
+  max-width: 1280px;
+  margin-inline: auto;
+
+  &-content {
+    padding-inline: 15px;
+
+
+    @include onDesktop {
+      padding-inline: 15px;
+    }
+
+    &__title {
+      padding-block: 20px 50px;
+      font-family: Open Sans;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 42px;
+      letter-spacing: .5px;
+      text-align: center;
+
+
+      @include onDesktop {
+        padding-block-start: 130px;
+      }
+    }
+
+    &__product {
+      @include pageGrid;
+      row-gap: 15px;
+      justify-content: center;
+      padding-block-end: 150px;
+      grid-template-columns: repeat(2, 2fr);
+
+      @include onDesktop {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        row-gap: 20px;
+      }
+
+      &-box {
+        background-color: #fff;
+        box-shadow: 0px 3px 17px 0px #515A6436;
+        border-radius: 8px;
+        width: 100%;
+
+        &:nth-child(4) {
+          grid-column: span 2;
+          order: 5;
+
+          @include onDesktop {
+            grid-column: unset;
+            order: unset;
+          }
+        }
+
+        &:hover {
+          box-shadow: 0px 3px 17px 6px #515A6436;
+        }
+      }
+
+      &-link {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        font-size: 16px;
+        line-height: 21px;
+        font-family: Helvetica;
+        font-weight: 700;
+        letter-spacing: .5px;
+        text-align: center;
+        text-decoration: none;
+        color: #000;
+
+        &--desktop {
+          display: none;
+
+          @include onDesktop {
+            display: block;
+          }
+        }
+
+        &--mobile {
+          @include onDesktop {
+            display: none;
+          }
+        }
+
+        @include onDesktop {
+          line-height: 27px;
+          font-size: 21px;
+          gap: 30px;
+          padding: 50px 40px;
+        }
+      }
+
+      &-image {
+        width: 50px;
+        height: 50px;
+
+        @include onTablet {
+          height: 70px;
+          width: 70px;
+        }
+
+        @include onDesktop {
+          width: 100px;
+          height: 100px;
+        }
+      }
+    }
+  }
+}

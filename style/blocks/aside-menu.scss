@@ -1,0 +1,159 @@
+.header-top__menu {
+  position: relative;
+}
+
+.burger-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  height: 100vh;
+  padding-inline: 20px;
+  padding-block-start: 10px;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 10;
+  opacity: 0;
+  transition: all 0.5s;
+  transform: translateX(-100%);
+  pointer-events: none;
+
+  @include onTablet {
+    width: 50%;
+    right: 0;
+    left: auto;
+  }
+
+  @include onDesktop {
+    display: none;
+  }
+
+  &__nav {
+    padding-block-start: 30px;
+  }
+
+  &__close {
+    &-icon {
+      width: 41px;
+      height: 41px;
+    }
+  }
+
+  &__navigation {
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &-items {
+      list-style: none;
+      width: 100%;
+    }
+
+    &-item {
+      list-style: none;
+    }
+
+    &-links {
+      position: relative;
+      display: block;
+      text-decoration: none;
+      font-family: Helvetica;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18px;
+      letter-spacing: .5px;
+      text-align: left;
+      color: #000;
+      padding: 10px;
+      border-bottom: 1px solid #99999999;
+
+      &:focus {
+        box-shadow: 0px 4px 4px 0px #515A6436;
+        border-radius: 8px;
+      }
+    }
+
+    &-link {
+      text-decoration: none;
+        font-family: Helvetica;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: .5px;
+        text-align: left;
+        color: #000;
+    }
+  }
+
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: all;
+  }
+}
+
+.burger-dropdown {
+  position: relative;
+
+  &__content {
+    display: none;
+    background-color: #fff;
+    z-index: 1;
+    top: calc(100% + 5px);
+    left: 0;
+    min-width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transform-origin: top;
+
+    &.show {
+      display: block;
+      margin-block-start: 20px;
+      opacity: 1;
+      transform: scaleY(1);
+    }
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__column {
+    flex: 1;
+    padding: 10px;
+  }
+
+  .burger-menu__navigation-links {
+    text-decoration: none;
+    display: block;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &::after {
+      display: block;
+      content: "";
+      width: 18px;
+      height: 10px;
+      background-image: url('../images/icons/chevron-down.svg');
+      background-repeat: no-repeat;
+    }
+
+    &.open::after {
+      display: block;
+      content: "";
+      width: 18px;
+      height: 10px;
+      background-image: url('../images/icons/chevron-up.svg');
+      background-repeat: no-repeat;
+    }
+  }
+}

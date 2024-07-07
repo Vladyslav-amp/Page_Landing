@@ -1,0 +1,130 @@
+.partners {
+  &-content {
+    max-width: 1280px;
+    margin-inline: auto;
+    padding-inline: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__title {
+      padding-block: 100px 20px;
+      font-family: Open Sans;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 33px;
+      text-align: left;
+
+      @include onTablet {
+        font-size: 28px;
+        padding-block-end: 60px;
+      }
+
+      @include onDesktop {
+        padding-block-start: 150px;
+        font-size: 32px;
+        line-height: 44px;
+      }
+    }
+
+    &__carousel {
+      overflow: hidden;
+      margin-bottom: 30px;
+      width: 100%;
+
+      &--line {
+        display: none;
+
+        @include onTablet {
+          display: flex;
+        }
+      }
+
+      &-wrapper {
+        display: flex;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      &-slide {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+
+        @include onTablet {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 30px;
+        }
+      }
+
+      &-company {
+        max-width: 400px;
+        box-sizing: border-box;
+        padding: 5px 20px;
+        background: #fff;
+        border-radius: 8px;
+        border: 1px solid #DADADA;
+        box-shadow: 0px 3px 6px 0px #00000029;
+        text-align: center;
+      }
+
+      &-image {
+        height: auto;
+        max-width: 70%;
+      }
+    }
+
+    &__controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &-button {
+        color: #fff;
+        border: none;
+        padding: 20px 15px;
+        cursor: pointer;
+        margin: 0 5px;
+        border-radius: 3px;
+
+        &:disabled {
+          fill: #aaa;
+          cursor: not-allowed;
+        }
+
+        &--back {
+          transform: rotate(-90deg);
+        }
+
+        &--next {
+          transform: rotate(90deg);
+        }
+      }
+
+      &-prev,
+      &-next {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    &__pagination {
+      display: flex;
+      gap: 5px;
+
+      & .dot {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: $main-site-color;
+        ;
+        opacity: 0.5;
+        cursor: pointer;
+      }
+
+      & .dot.active {
+        opacity: 1;
+      }
+    }
+  }
+}

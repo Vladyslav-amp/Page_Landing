@@ -1,0 +1,121 @@
+.about {
+  padding-block: 80px;
+  max-width: 1280px;
+  margin-inline: auto;
+
+  @include onTablet {
+    padding-bottom: 150px;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+
+    @include onDesktop {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &__box {
+      padding-inline: 15px;
+      display: flex;
+      flex-direction: column;
+
+      @include onDesktop {
+        width: 50%;
+      }
+
+      &-title {
+        font-family: Open Sans;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 31px;
+        letter-spacing: .5px;
+        text-align: left;
+
+        @include onDesktop {
+          line-height: 42px;
+          font-size: 32px;
+        }
+      }
+
+      &-text {
+        padding-block: 15px 30px;
+        font-family: Helvetica;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: .5px;
+        text-align: left;
+
+        @include onTablet {
+          padding-block-start: 50px;
+          font-size: 18px;
+          line-height: 23px;
+        }
+
+        &--dot {
+          @include onTablet {
+            display: none;
+          }
+        }
+
+        &--hidden {
+          display: none;
+
+          @include onTablet {
+            display: block;
+          }
+
+          &.show {
+            display: inline;
+          }
+        }
+      }
+
+      &-link {
+        color: $main-site-color;
+      }
+    }
+
+    &__team {
+      height: 280px;
+
+      @include onTablet {
+        height: 450px;
+      }
+
+      @include onDesktop {
+        width: 50%;
+      }
+
+      &-image {
+        background-image: url('../images/Team.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+        height: 100%;
+      }
+    }
+
+    &__more {
+      padding-block: 25px;
+      padding-inline: 15px;
+
+      @include onTablet {
+        display: none;
+      }
+
+      &-link {
+        font-family: Helvetica;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: .5px;
+        text-align: left;
+        color: #1A0F91;
+      }
+    }
+  }
+}

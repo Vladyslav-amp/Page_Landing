@@ -1,0 +1,93 @@
+@for $i from 1 to 5 {
+  .advantages-content__list-item:nth-child(#{$i}) {
+    display: none;
+
+    @include onDesktop {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+@for $i from 5 to 11 {
+  .advantages-content__list-item:nth-child(#{$i}) {
+    @include onDesktop {
+      display: none;
+    }
+  }
+}
+
+
+
+.advantages {
+  box-shadow: 0px 4px 17px 0px #75757536;
+  background: #FFF;
+
+  &-content {
+    padding-block: 90px 50px;
+    max-width: 1280px;
+    margin-inline: auto;
+    padding-inline: 15px;
+    box-sizing: border-box;
+
+    @include onTablet {
+      padding-bottom: 130px;
+    }
+
+    &__title {
+      font-family: Open Sans;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 42px;
+      letter-spacing: .5px;
+    }
+
+    &__list {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      row-gap: 30px;
+      column-gap: 20px;
+      padding-block-start: 50px;
+
+      @include onDesktop {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      &-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+
+      }
+
+      &-text {
+        font-family: Helvetica;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 23px;
+        letter-spacing: .5px;
+        text-align: left;
+
+        &--bigger {
+          font-size: 26px;
+        }
+
+        &--upcase {
+          text-transform: uppercase;
+        }
+      }
+
+      &-image {
+        width: 35px;
+        height: 35px;
+
+        @include onDesktop {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+  }
+}

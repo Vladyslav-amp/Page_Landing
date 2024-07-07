@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script type='text/javascript' src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <header id="header" class="header">
+    <div class="header-top__menu">
+      <div class="header-top__menu-block">
+        <div class="header-top__menu-logo">
+          <img src="./images/icons/Logo-mobile.svg" alt="Logo_mobile" class="header-top__menu-emblem">
+        </div>
+
+        <div class="header-top__menu-side">
+          <div class="header-top__menu-button">
+            <a href="#" class=" header-top__menu-call" data-ua="Подзвонити" data-ru="Позвонить">
+              Подзвонити
+            </a>
+          </div>
+
+          <div class="header-top__menu-burger">
+            <a href="#" class="header-top__menu-burger-link">
+              <img src="./images/icons/burger-open.svg" alt="menu-open"
+                class="header-top__menu-icon burger-menu__open-icon">
+
+              <img src="./images/icons/burger-close.svg" alt="menu-close"
+                class="header-top__menu-icon burger-menu__close-icon" style="display: none;">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <aside class="burger-menu" id="menu">
+        <div class="burger-menu__nav">
+          <nav class="burger-menu__navigation">
+            <ul class="burger-menu__navigation-list">
+              <li class="burger-menu__navigation-items">
+                <a href="#header" class="burger-menu__navigation-links" data-ua="Головна" data-ru="Главная">
+                  Головна
+                </a>
+              </li>
+
+              <li class="burger-menu__navigation-items">
+                <div class="burger-dropdown">
+                  <a href="#" class="burger-menu__navigation-links" data-ua="Застрахувати" data-ru="Застраховать">
+                    Застрахувати
+                  </a>
+                  <div class="burger-dropdown__content">
+                    <div class="burger-dropdown__row">
+                      <div class="burger-dropdown__column">
+                        <div class="burger-menu__dropdown">
+                          <ul class="burger-menu__navigation-list">
+                            <li class="burger-menu__navigation-item">
+                              <a href="#header" class="burger-menu__navigation-link" data-ua="Автоцивілка"
+                                data-ru="Автогражданка">
+                                Автоцивілка
+                              </a>
+                            </li>
+
+                            <li class="burger-menu__navigation-item">
+                              <a href="#" class="burger-menu__navigation-link" data-ua="Каско" data-ru="Каско">
+                                Каско
+                              </a>
+                            </li>
+
+                            <li class="burger-menu__navigation-item">
+                              <a href="#about" class="burger-menu__navigation-link" data-ua="Зелена карта"
+                                data-ru="Зелёная карта">
+                                Зелена карта
+                              </a>
+                            </li>
+
+                            <li class="burger-menu__navigation-item">
+                              <a href="#contact" class="burger-menu__navigation-link" data-ua="Страхування майна"
+                                data-ru="Страхование имущества">
+                                Страхування майна
+                              </a>
+                            </li>
+
+                            <li class="burger-menu__navigation-item">
+                              <a href="#promote" class="burger-menu__navigation-link" data-ua="Туристичне страхування"
+                                data-ru="Туристическое страхование">
+                                Туристичне страхування
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="burger-menu__navigation-items">
+                <div class="burger-dropdown">
+                  <a href="#" class="burger-menu__navigation-links" data-ua="Страховий випадок"
+                    data-ru="Страховой случай">
+                    Страховий випадок
+                  </a>
+                  <div class="burger-dropdown__content">
+                    <div class="burger-dropdown__row">
+                      <div class="burger-dropdown__column">
+                        <div class="burger-menu__dropdown">
+                          <ul class="burger-menu__navigation-list">
+                            <li class="burger-menu__navigation-item">
+                              <a href="#header" class="burger-menu__navigation-link" data-ua="Оцінка збитку"
+                                data-ru="Оценка ущерба">
+                                Оцінка збитку
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="burger-menu__navigation-items">
+                <a href="#about" class="burger-menu__navigation-links" data-ua="Про компанію" data-ru="О компании">
+                  Про компанію
+                </a>
+              </li>
+
+              <li class="burger-menu__navigation-items">
+                <div class="burger-dropdown">
+                  <a href="#" class="burger-menu__navigation-links" data-ua="Корисна інформація"
+                    data-ru="Полезная информация">
+                    Корисна інформація
+                  </a>
+                  <div class="burger-dropdown__content">
+                    <div class="burger-dropdown__row">
+                      <div class="burger-dropdown__column">
+                        <div class="burger-menu__dropdown">
+                          <ul class="burger-menu__navigation-list">
+                            <li class="burger-menu__navigation-item">
+                              <a href="#header" class="burger-menu__navigation-link" data-ua="Оплата і доставка"
+                                data-ru="Оплата и доставка">
+                                Оплата і доставка
+                              </a>
+                            </li>
+                            <li class="burger-menu__navigation-item">
+                              <a href="#" class="burger-menu__navigation-link" data-ua="Розірвання договору"
+                                data-ru="Расторжение договора">
+                                Розірвання договору
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="burger-menu__navigation-items">
+                <a href="#feedback" class="burger-menu__navigation-links" data-ua="Контакти" data-ru="Контакты">
+                  Контакти
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="header-bottom__languages" id="languageBlock1">
+          <button class="header-bottom__languages-button" id="btn-ua">UA</button>
+          <button class="header-bottom__languages-button" id="btn-ua">RU</button>
+        </div>
+      </aside>
+    </div>
+
+    <div class="header-top">
+      <div class="header-top__logo">
+        <div class="header-top__logo-block">
+          <img src="./images/icons/Logo.svg" alt="Logo_1" class="header-top__logo-icon">
+        </div>
+      </div>
+
+      <div class="header-top__locate">
+        <p class="header-top__locate-adress" data-ua="Україна, 01601, м. Київ, <br> Печерський узвіз 3, оф. 806"
+          data-ru="Украина, 01601, г. Киев, <br> Печерский спуск 3, оф. 806">
+          Україна, 01601, м. Київ, <br> Печерський узвіз 3, оф. 806
+        </p>
+      </div>
+
+      <div class="header-top__social">
+        <ul class="header-top__social-list">
+          <li class="header-top__social-item">
+            <a href="https://www.facebook.com" class="header-top__social-link">
+              <img src="./images/social/Facebook.svg" alt="Facebook" class="header-top__social-facebook">
+            </a>
+          </li>
+
+          <li class="header-top__social-item">
+            <a href="https://www.messenger.com" class="header-top__social-link">
+              <img src="./images/social/Messenger.svg" alt="Messenger" class="header-top__social-messenger">
+            </a>
+          </li>
+
+          <li class="header-top__social-item">
+            <a href="https://www.google.com/intl/pl/gmail/about/" class="header-top__social-link">
+              <img src="./images/social/Gmail.svg" alt="Gmail" class="header-top__social-gmail">
+            </a>
+          </li>
+
+          <li class="header-top__social-item">
+            <a href="https://www.viber.com" class="header-top__social-link">
+              <img src="./images/social/Viber.svg" alt="Viber" class="header-top__social-viber">
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="header-top__call">
+        <a href="tel:+6494461709" class="header-top__call-link">
+          <img src="./images/icons/Phone.svg" alt="Phone" class="header-top__call-phone">
+          (044) 235-72-79
+        </a>
+      </div>
+
+      <div class="header-top__button">
+        <a href="" class="header-top__button-call" data-ua="Замовити дзвінок" data-ru="Заказать звонок">
+          Замовити дзвінок
+        </a>
+      </div>
+    </div>
+
+    <div class="header-bottom">
+      <div class="header-bottom__block">
+        <div class="header-bottom__menu">
+          <nav class="header-bottom__menu-navigate">
+            <ul class="header-bottom__menu-list">
+              <li class="header-bottom__menu-item">
+                <a href="" class="header-bottom__menu-link" data-ua="головна" data-ru="главная">головна</a>
+              </li>
+
+              <li class="header-bottom__menu-item">
+                <a href="" class="header-bottom__menu-link" data-ua="застрахувати" data-ru="страховать">застрахувати</a>
+              </li>
+
+              <li class="header-bottom__menu-item">
+                <a href="" class="header-bottom__menu-link" data-ua="страховий випадок" data-ru="страховой случай">страховий випадок</a>
+              </li>
+
+              <li class="header-bottom__menu-item">
+                <a href="#about" class="header-bottom__menu-link" data-ua="про компанію" data-ru="о компании">про компанію</a>
+              </li>
+
+              <li class="header-bottom__menu-item">
+                <a href="" class="header-bottom__menu-link" data-ua="корисна інформація"
+                    data-ru="полезная информация">корисна інформація</a>
+              </li>
+
+              <li class="header-bottom__menu-item">
+                <a href="#feedback" class="header-bottom__menu-link" data-ua="контакти" data-ru="контакты">контакти</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        
+        <div class="header-bottom__languages" id="languageBlock1">
+          <button class="header-bottom__languages-button" id="btn-ua">UA</button>
+          <button class="header-bottom__languages-button" id="btn-ru">RU</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-content">
+      <div class="header-content__block" data-ua="надійна страховка - крок до безпеки"
+        data-ru="надежное страхование - шаг к безопасности">
+        <h1 class="header-content__block-title" data-ua="надійна страховка - крок до безпеки: <br> приєднуйтесь до нас"
+          data-ru="надёжная страховка - шаг к безопасности: <br> присоединяйтесь к нам">
+          надійна страховка -
+          <span class="header-content__block-title--lightgreen" data-ua="крок до безпеки:"
+            data-ru="шаг к безопасности:">
+            крок до безпеки:
+          </span>
+          <br>
+          <span data-ua="приєднуйтесь до нас" data-ru="присоединяйтесь к нам">приєднуйтесь до нас</span>
+        </h1>
+
+        <p class="header-content__block-text"
+          data-ua="Захистіть себе та своїх близьких разом із нами – надійною страховою компанією. Ми готові стати вашим надійним партнером, який забезпечить надійний захист та фінансову безпеку у разі непередбачуваних ситуацій."
+          data-ru="Защитите себя и своих близких вместе с нами - надежной страховой компанией. Мы готовы стать вашим надежным партнером, который обеспечит надежную защиту и финансовую безопасность в случае непредвиденных ситуаций.">
+          Захистіть себе та своїх близьких разом із нами – надійною страховою компанією. Ми готові стати вашим надійним
+          партнером, який забезпечить надійний захист та фінансову безпеку у разі непередбачуваних ситуацій.
+        </p>
+
+        <div class="header-content__block-picture">
+          <div class="header-content__block-image"></div>
+        </div>
+
+        <div class="header-content__block-link">
+          <a href="#" class="header-content__block-button" data-ua="Придбати страховку" data-ru="Купить страховку">
+            Придбати страховку
+          </a>
+        </div>
+      </div>
+
+      <div class="header-content__image">
+        <div class="header-content__image-link"></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section id="products" class="products">
+      <div class="products-content">
+        <h1 class="products-content__title" data-ua="Наші страхові продукти" data-ru="Наши страховые продукты">Наші
+          страхові продукти</h1>
+
+        <div class="products-content__product">
+          <div class="products-content__product-box">
+            <a href="#" class="products-content__product-link" data-ua="Автоцивілка" data-ru="Автогражданка">
+              <img src="./images/products/Product_1.svg" alt="Product_1" class="products-content__product-image">
+              <span class="products-content__product-text">Автоцивілка</span>
+            </a>
+          </div>
+
+          <div class="products-content__product-box">
+            <a href="#" class="products-content__product-link" data-ua="КАСКО страхування" data-ru="КАСКО страхование">
+              <img src="./images/products/Product_2.svg" alt="Product_2" class="products-content__product-image">
+              <span class="products-content__product-text">КАСКО страхування</span>
+            </a>
+          </div>
+
+          <div class="products-content__product-box">
+            <a href="#" class="products-content__product-link" data-ua="КАСКО страхування" data-ru="Зелена карта">
+              <img src="./images/products/Product_3.svg" alt="Product_3" class="products-content__product-image">
+              <span class="products-content__product-text">КАСКО страхування</span>
+            </a>
+          </div>
+
+          <div class="products-content__product-box">
+            <a href="#" class="products-content__product-link" data-ua="Туристичне страхування"
+              data-ru="Туристическое страхование">
+              <img src="./images/products/Product_4.svg" alt="Product_4" class="products-content__product-image">
+              <span class="products-content__product-text">Туристичне страхування</span>
+            </a>
+          </div>
+
+          <div class="products-content__product-box">
+            <a href="#" class="products-content__product-link" data-ua="Страхування майна"
+              data-ru="Страхование имущества">
+              <img src="./images/products/Product_5.svg" alt="Product_5" class="products-content__product-image">
+              <span class="products-content__product-text">Страхування майна</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="advantages" class="advantages">
+      <div class="advantages-content">
+        <h1 class="advantages-content__title">
+          Переваги купувати онлайн
+        </h1>
+        
+        <div class="advantages-content__list">
+          <div class="advantages-content__list-item">
+            <img src="./images/advantages/Advantages_1.svg" alt="Advantages_1" class="advantages-content__list-image">
+            <p class="advantages-content__list-text">
+              Безкоштовна доставка.
+            </p>
+          </div>
+
+          <div class="advantages-content__list-item">
+            <img src="./images/advantages/Advantages_2.svg" alt="Advantages_2" class="advantages-content__list-image">
+            <p class="advantages-content__list-text">
+              Миттєве отримання страхового покриття;
+            </p>
+          </div>
+
+          <div class="advantages-content__list-item">
+            <img src="./images/advantages/Advantages_3.svg" alt="Advantages_3" class="advantages-content__list-image">
+            <p class="advantages-content__list-text">
+              <span class="advantages-content__list-text--bigger">
+                5%
+              </span>
+              знижку на інший вид страхування при одночасному укладенні договорів;
+            </p>
+          </div>
+
+          <div class="advantages-content__list-item">
+            <img src="./images/advantages/Advantages_4.svg" alt="Advantages_4" class="advantages-content__list-image">
+            <p class="advantages-content__list-text">
+              <span class="advantages-content__list-text--bigger">
+                7%
+              </span>
+              знижку на всі види страхування
+            </p>
+          </div>
+
+          <div class="advantages-content__list-item">
+            <img src="./images/advantages/Advantages_2.svg" alt="Advantages_2" class="advantages-content__list-image">
+            <p class="advantages-content__list-text">
+              Миттєве отримання страхового покриття;
+            </p>
+          </div>
+
+          <div class="advantages-content__list-item">
+            <img src="./images/advantages/Advantages_3.svg" alt="Advantages_3" class="advantages-content__list-image">
+            <p class="advantages-content__list-text">
+              5% знижку на інший вид страхування при одночасному укладенні договорів;
+            </p>
+          </div>
+
+          <div class="advantages-content__list-item">
+            <img src="./images/advantages/Advantages_6.svg" alt="Advantages_4" class="advantages-content__list-image">
+            <p class="advantages-content__list-text">
+              7% знижку на всі види страхування
+            </p>
+          </div>
+
+          <div class="advantages-content__list-item">
+            <img src="./images/advantages/Advantages_5.svg" alt="Advantages_2" class="advantages-content__list-image">
+            <p class="advantages-content__list-text">
+              Безкоштовна доставка
+            </p>
+          </div>
+
+          <div class="advantages-content__list-item">
+            <img src="./images/advantages/Advantages_7.svg" alt="Advantages_2" class="advantages-content__list-image">
+            <p class="advantages-content__list-text">
+              <span class="advantages-content__list-text--upcase">
+                автодопомога
+              </span>
+              в подарунок при купівлі
+              <span class="advantages-content__list-text--upcase">
+                каско
+              </span>
+              - онлайн;
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="about" class="about">
+      <div class="about-content">
+        <div class="about-content__box">
+          <h2 class="about-content__box-title">
+            Про нас
+          </h2>
+
+          <p class="about-content__box-text">
+            «Polisa-Online» є унікальним онлайн-сервісом, який революціонізує
+            спосіб придбання страхового полісу для українців. Тепер вам не
+            потрібно виходити зі зручності своєї квартири, будинку або офісу,
+            для того щоб забезпечити себе надійним страховим покриттям.
+            За декілька
+            <span class="about-content__box-text--dot">...</span>
+            <span class="about-content__box-text--hidden">
+              простих кроків у нашому сервісі, ви отримаєте можливість
+              вибрати оптимальний страховий продукт, який відповідатиме вашим
+              потребам. <br>
+              <br>
+              Наша компания допомагає вам економити час та зусилля, забезпечуючи
+              доступ до страхових продуктів просто за кілька хвилин. Відкрийте
+              для себе новий рівень зручності та ефективності в процесі придбання
+              страхових полісів і довірте свою фінансову безпеку надійному сервісу
+              «Polisa-Online».Ви можете скористатись
+              <a href="#" class="about-content__box-link">
+                калькулятором для розрахунку вартості
+              </a>
+              страховки виключно за вашими потребами.
+            </span>
+          </p>
+        </div>
+
+        <div class="about-content__more">
+          <a href="" class="about-content__more-link">
+            Читати повністю
+          </a>
+        </div>
+
+        <div class="about-content__team">
+          <div class="about-content__team-image"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="feedback" class="feedback">
+      <div class="feedback-content">
+        <div class="feedback-content__form">
+          <h1 class="feedback-content__title">
+            Замовити дзвінок
+          </h1>
+
+          <p class="feedback-content__text">
+            Якщо Ви маєте питання, пропозиції або відгуки.
+            Будь ласка, заповніть форму нижче, і ми зв'яжемося з вами
+            найближчим часом.
+          </p>
+
+          <form id="phoneForm" onsubmit="return validatePhone()" class="feedback-form">
+            <label class="feedback-form__label">
+              <input type="text" id="name" class="feedback-form__input" name="name" placeholder="Ваше  Імʼя" required>
+            </label>
+
+            <label class="feedback-form__label">
+              <input 
+                type="tel" 
+                id="phone" 
+                class="feedback-form__input" 
+                name="phone"
+                placeholder="Ваш телефон"
+                pattern="\+38\(\d{3}\)-\d{3}-\d{2}-\d{2}" 
+                required>
+            </label>
+
+            <button class="feedback-form__button" type="submit">
+              Замовити дзвінок
+            </button>
+          </form>
+
+          <div class="overlay" id="overlay"></div>
+
+          <div class="thx-page" id="thxPage">
+            <div class="thx-content">
+              <span class="thx-content__button-image" id="closeBtn">
+                <img src="./images/icons/close.svg" alt="" class="thx-content__button-image--close">
+              </span>
+
+              <p class="thx-content__text"></p>
+              
+              <button class="thx-content__button-main" id="mainBtn">На головну</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="feedback-content__image">
+          <div class="feedback-content__image-block"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="partners" class="partners">
+      <div class="partners-content">
+        <h1 class="partners-content__title">
+          Наші партнери
+        </h1>
+
+        <div class="partners-content__carousel">
+          <div class="partners-content__carousel-wrapper">
+            <div class="partners-content__carousel-slide">
+              <div class="partners-content__carousel-company">
+                <img src="./images/partners/Cisco.svg" alt="" class="partners-content__carousel-image">
+              </div>
+
+              <div class="partners-content__carousel-company">
+                <img src="./images/partners/HP.svg" alt="" class="partners-content__carousel-image">
+              </div>
+
+              <div class="partners-content__carousel-company">
+                <img src="./images/partners/Cisco.svg" alt="" class="partners-content__carousel-image">
+              </div>
+
+              <div class="partners-content__carousel-company">
+                <img src="./images/partners/HP.svg" alt="" class="partners-content__carousel-image">
+              </div>
+            </div>
+
+            <div class="partners-content__carousel-slide">
+              <div class="partners-content__carousel-company">
+                <img src="./images/partners/Cisco.svg" alt="" class="partners-content__carousel-image">
+              </div>
+              <div class="partners-content__carousel-company">
+                <img src="./images/partners/HP.svg" alt="" class="partners-content__carousel-image">
+              </div>
+              <div class="partners-content__carousel-company">
+                <img src="./images/partners/Cisco.svg" alt="" class="partners-content__carousel-image">
+              </div>
+              <div class="partners-content__carousel-company">
+                <img src="./images/partners/HP.svg" alt="" class="partners-content__carousel-image">
+              </div>
+            </div>
+
+            <div class="partners-content__carousel-slide">
+              <div class="partners-content__carousel-company">
+                <img src="./images/partners/Cisco.svg" alt="" class="partners-content__carousel-image">
+              </div>
+              <div class="partners-content__carousel-company">
+                <img src="./images/partners/HP.svg" alt="" class="partners-content__carousel-image">
+              </div>
+              <div class="partners-content__carousel-company">
+                <img src="./images/partners/Cisco.svg" alt="" class="partners-content__carousel-image">
+              </div>
+              <div class="partners-content__carousel-company">
+                <img src="./images/partners/HP.svg" alt="" class="partners-content__carousel-image">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="partners-content__controls">
+        <div class="partners-content__controls-prev">
+          <img src="./images/icons/chevron-up.svg" alt="arrow_previous"
+            class="partners-content__controls-button partners-content__controls-button--back">
+        </div>
+        <div class="partners-content__pagination"></div>
+
+        <div class="partners-content__controls-next">
+          <img src="./images/icons/chevron-up.svg" alt="arrow_next"
+            class="partners-content__controls-button partners-content__controls-button--next">
+        </div>
+      </div>
+      </div>
+      </div>
+    </section>
+  </main>
+  <!-- <footer class="footer"></footer> -->
+
+
+  <script src="./script/phoneValidation.js"></script>
+  <script src="./script/carousel.js"></script>
+  <script src="./script/burger.js"></script>
+  <script src="./script/dropdown.js"></script>
+  <script src="./script/readMore.js"></script>
+  <script src="./script/language.js"></script>
+
+</body>
+
+</html>
